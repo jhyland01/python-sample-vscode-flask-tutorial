@@ -3,9 +3,15 @@
 Home
 {% endblock %}
 {% block content %}
-<p>Home page for the Visual Studio Code Flask tutorial.</p>
-<p>Define how many sets of hyperparameters you would like to sample:</p>
-<input type="text" name="Nhyp"/>
+<form action = "/search" method = "GET">
+    <label> Define how many sets of hyperparameters you would like to sample: </label> <br/>
+      <div class="field">
+  <div class="control">
+    <input class="input is-primary" type="number" placeholder="No. of sets" name = "Nhyp">
+  </div>
+</div>
+    <button class = "btn main-btn" type = "submit">Run</button>
+  </form>
 <p>Define how many samples you would like to obtain from each set of hyperparameters:</p>
 <input type="text" name="Nsamps"/>
 <p>Run the select_hyperparameters.py file:</p>
