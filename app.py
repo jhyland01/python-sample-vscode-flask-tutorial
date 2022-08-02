@@ -10,7 +10,7 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route("/search")
+@app.route("/run")
 def search():
     data = request.args
     keyword = data["Nhyp"]
